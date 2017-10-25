@@ -3,7 +3,7 @@ import _lodash from'lodash'
 import _UA from'./UA'
 import _ENUM from'./ENUM'
 
-var _slicedToArray = function () {
+const _slicedToArray = function () {
   function sliceIterator(arr, i) {
     var _arr = [];
     var _n = true;
@@ -37,8 +37,7 @@ var _slicedToArray = function () {
     }
   };
 }();
-
-var _createClass = function () {
+const _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
       var descriptor = props[i];
@@ -125,7 +124,6 @@ const SwipeVideo = function (_EventEmitter) {
   _createClass(SwipeVideo, [{
     key: 'initSpriteConfig',
     value: function initSpriteConfig() {
-      // TODO: できれば一応、2x2以外にも対応
       this.spriteConfig = [{
         x1: 0,
         y1: 0,

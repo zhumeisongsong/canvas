@@ -1,4 +1,4 @@
-import _lodash from 'lodash'
+import _ from 'lodash'
 
 exports.PHASE = exports.MODE = exports.SWIPE_TYPE = undefined;
 
@@ -12,4 +12,4 @@ exports.MODE = {
   PAINT: 'paint'
 };
 
-exports.PHASE = _lodash.invert(['LANDING', 'LOADING', 'LOADED', 'PLAYING', 'ENDED']);
+exports.PHASE = _.invert(['LANDING', 'LOADING', 'LOADED', 'PLAYING', 'ENDED']);

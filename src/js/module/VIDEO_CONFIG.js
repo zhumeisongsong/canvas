@@ -1,4 +1,3 @@
-//video size
 import _UA from './UA'
 
 const ENVS = {

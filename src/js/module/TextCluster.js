@@ -16,25 +16,11 @@ var _createClass = function () {
   };
 }();
 
-var _events = require('events');
+import _events from 'events'
+import _ from 'lodash'
+import _SpriteAnime from'./SpriteAnime'
+import _SPRITE_ANIME_CONFIG from'./SPRITE_ANIME_CONFIG'
 
-var _events2 = _interopRequireDefault(_events);
-
-var _lodash = require('lodash');
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
-var _SpriteAnime = require('./SpriteAnime');
-
-var _SpriteAnime2 = _interopRequireDefault(_SpriteAnime);
-
-var _SPRITE_ANIME_CONFIG = require('./SPRITE_ANIME_CONFIG');
-
-var _SPRITE_ANIME_CONFIG2 = _interopRequireDefault(_SPRITE_ANIME_CONFIG);
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {default: obj};
-}
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -92,12 +78,12 @@ var TextCluster = function (_EventEmitter) {
   _createClass(TextCluster, [{
     key: 'initTextArray',
     value: function initTextArray() {
-      var configPattern = [_SPRITE_ANIME_CONFIG2.default.TEXT1, _SPRITE_ANIME_CONFIG2.default.TEXT2, _SPRITE_ANIME_CONFIG2.default.TEXT3, _SPRITE_ANIME_CONFIG2.default.TEXT4];
+      var configPattern = [_SPRITE_ANIME_CONFIG.TEXT1, _SPRITE_ANIME_CONFIG.TEXT2, _SPRITE_ANIME_CONFIG.TEXT3, _SPRITE_ANIME_CONFIG.TEXT4];
 
-      this.textArray = _lodash2.default.map(new Array(10), function () {
+      this.textArray = _.map(new Array(10), function () {
         var config = configPattern[Math.floor(Math.random() * configPattern.length)];
         return {
-          anime: new _SpriteAnime2.default(config)
+          anime: new _SpriteAnime(config)
         };
       });
     }
@@ -105,7 +91,7 @@ var TextCluster = function (_EventEmitter) {
     key: 'start',
     value: function start(pos) {
       this.startTime = Date.now();
-      _lodash2.default.each(this.textArray, function (text) {
+      _.each(this.textArray, function (text) {
         text.x = pos[0];
         text.y = pos[1];
         text.rad = Math.PI * 2 * Math.random();
@@ -129,7 +115,7 @@ var TextCluster = function (_EventEmitter) {
 
       var value = time / this.duration;
 
-      _lodash2.default.each(this.textArray, function (text, index) {
+      _.each(this.textArray, function (text, index) {
         var x = text.x + Math.cos(text.rad) * text.distance * value;
         var y = text.y + Math.sin(text.rad) * text.distance * value;
         ctx.save();
@@ -143,6 +129,6 @@ var TextCluster = function (_EventEmitter) {
   }]);
 
   return TextCluster;
-}(_events2.default);
+}(_events);
 
-exports.default = TextCluster;
+export default TextCluster;
