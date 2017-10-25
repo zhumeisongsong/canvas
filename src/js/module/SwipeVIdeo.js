@@ -270,10 +270,14 @@ const SwipeVideo = function (_EventEmitter) {
             this.roundSwipeFinger();
             this.emit('endSwipe');
             break;
+
           case _ENUM.MODE.PAINT:
             this.scaleUpPaint(undefined, function () {
               _this3.incrementSprite();
             });
+            break;
+          case __ENUM.MODE.GRAPH:
+            this.topSwipeFinger();
             break;
         }
       }
@@ -317,6 +321,20 @@ const SwipeVideo = function (_EventEmitter) {
   }, {
     key: 'roundSwipeFinger',
     value: function roundSwipeFinger() {
+      var _this4 = this;
+
+      if (this.finger < 0.5) {
+        this.animateSwipe(0);
+      } else {
+        this.animateSwipe(1, undefined, function () {
+          _this4.finger = 0;
+          _this4.incrementSprite();
+        });
+      }
+    }
+  }, {
+    key: 'topSwipeFinger',
+    value: function topSwipeFinger() {
       var _this4 = this;
 
       if (this.finger < 0.5) {

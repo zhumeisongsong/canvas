@@ -1,4 +1,3 @@
-//swipe video actions change point
 export default {
   INTRO: 29.2,
   AMELO: 44.8,

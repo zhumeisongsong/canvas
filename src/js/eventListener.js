@@ -1,4 +1,6 @@
-export const menuToggleListener = (swipeVideo) => {
+import {swipeVideo} from './swipeVideo'
+
+export const menuToggleBind = () => {
   const menuToggle = document.querySelector('.js-menu-toggle')
 
   menuToggle.addEventListener('click', function () {
@@ -14,8 +16,9 @@ export const menuToggleListener = (swipeVideo) => {
   })
 }
 
-export const replayBtnListener = (swipeVideo) => {
+export const replayBtnBind = () => {
   const replayBtn = document.querySelector('.js-replay')
+  const ending = document.querySelector('.js-ending')
 
   replayBtn.addEventListener('click', function () {
     swipeVideo.restartVideo()

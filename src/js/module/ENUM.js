@@ -9,7 +9,8 @@ exports.SWIPE_TYPE = {
 
 exports.MODE = {
   SWIPE: 'swipe',
-  PAINT: 'paint'
+  PAINT: 'paint',
+  GRAPH:'graph'
 };
 
 exports.PHASE = _.invert(['LANDING', 'LOADING', 'LOADED', 'PLAYING', 'ENDED']);

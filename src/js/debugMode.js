@@ -1,8 +1,9 @@
 import _VIDEO_CHAPTER from'./module/VIDEO_CHAPTER'
 import _ENUM from'./module/ENUM'
 
+import {swipeVideo} from './swipeVideo'
 
-export const checkDebugMode = (isDebug,videoDom, swipeVideo) => {
+export const checkDebugMode = (isDebug, videoDom) => {
   const startBtn = document.querySelector('.js-start-btn')
   const modeBtn = document.querySelector('.js-mode-btn')
   const shuffleBtn = document.querySelector('.js-shuffle-btn')
@@ -43,6 +44,10 @@ export const checkDebugMode = (isDebug,videoDom, swipeVideo) => {
     })
     swipeVideo.on('tap', function (e) {
       isDebug && console.log('[tap]', [e.x, e.y])
+    })
+
+    videoDom.addEventListener('canplaythrough', function () {
+      isDebug && console.log('[can play through]')
     })
   }
 
