@@ -47,7 +47,7 @@ function _inherits(subClass, superClass) {
   if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
-var SpriteAnime = function (_EventEmitter) {
+const SpriteAnime = function (_EventEmitter) {
   _inherits(SpriteAnime, _EventEmitter);
 
   function SpriteAnime() {
