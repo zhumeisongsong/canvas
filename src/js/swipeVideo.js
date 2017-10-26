@@ -1,10 +1,10 @@
 import _VIDEO_CONFIG from './module/VIDEO_CONFIG'
-import _SwipeVideo from'./module/SwipeVideo'
+import {SwipeVideo} from './module/SwipeVideo'
 
 const canvas = document.querySelector('.js-canvas')
 const videoDom = document.querySelector('.js-video-sprite')
 
-export const swipeVideo = new _SwipeVideo({
+export const swipeVideo = new SwipeVideo({
   canvas: canvas,
   video: videoDom,
   src: _VIDEO_CONFIG.SRC,

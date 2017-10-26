@@ -24,7 +24,7 @@ export const checkDebugMode = (isDebug, videoDom) => {
       swipeVideo.incrementSprite()
     })
     skipIntroBtn.addEventListener('click', function () {
-      videoDom.currentTime = _VIDEO_CHAPTER.INTRO
+      videoDom.currentTime = _VIDEO_CHAPTER.BMELO
     })
     skipSongBtn.addEventListener('click', function () {
       videoDom.currentTime = videoDom.duration - 3

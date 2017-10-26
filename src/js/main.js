@@ -23,9 +23,6 @@ const initSP = () => {
   const canvas = document.querySelector('.js-canvas')
   const videoDom = document.querySelector('.js-video-sprite')
 
-  let x = canvas.offsetWidth
-  let y = canvas.offsetHeight
-
   if (checkOSAlert() || checkWebviewAlert()) {
     return
   }
@@ -34,7 +31,7 @@ const initSP = () => {
 
   loaderBind()
   videoDomBind(videoDom)
-  swipeVideoBind(x, y)
+  swipeVideoBind(canvas)
   menuToggleBind()
   replayBtnBind()
 
@@ -68,11 +65,11 @@ function videoDomBind(videoDom) {
   })
 }
 
-function swipeVideoBind(x, y) {
+function swipeVideoBind(canvas) {
   let firstPlayedFlag = false
 
   swipeVideo.on('tap', function (e) {
-    textClusterArray = addTextCluster(_VIDEO_CONFIG.WIDTH * e.x / x, _VIDEO_CONFIG.HEIGHT * e.y / y)
+    textClusterArray = addTextCluster(_VIDEO_CONFIG.WIDTH * e.x / canvas.offsetWidth, _VIDEO_CONFIG.HEIGHT * e.y / canvas.offsetHeight)
   })
 
   swipeVideo.on('endSwipe', function () {
@@ -85,7 +82,8 @@ function swipeVideoBind(x, y) {
     firstPlayedFlag = true
     loader.hide()
   })
-  swipeVideo.setMode(_ENUM.MODE.GRAPH)
+
+  swipeVideo.setMode(_ENUM.MODE.PAINT)
 
 }
 
@@ -116,7 +114,6 @@ function startLoop(canvas, videoDom) {
     switch (swipeVideo.mode) {
       case _ENUM.MODE.SWIPE:
         if (swipeVideo.fingerActive > 0) {
-          // TODO: 判定インタフェース変えたい
           drawAura(swipeVideo.finger, ctx)
         } else if (_ENUM.PHASE.LOADED <= phase && !firstSwipedFlag) {
           drawSwipePrompt(ctx)
