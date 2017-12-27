@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <!-- meta-->
+  <title>Questyデビュー曲FANTASY 特設サイト</title>
+  <!--<meta name="description" content="スワイプできるミュージックビデオ。Questyのデビュー曲FANTASY発売を記念して動画の色やカメラアングルをVJ感覚で変更できる最新型のMVになります。">-->
+  <!-- <link rel="shortcut icon" href="/img/favicon_Q.png" type="image/vnd.microsoft.icon"> -->
+  <!-- <link rel="icon" href="/img/favicon_Q.png" type="image/vnd.microsoft.icon"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <!-- smartphone meta-->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="http://questy-fantasy.jp/img/home-icon_Q.png">
+
+  <!-- ogp-->
+  <!--<meta property="og:url" content="http://questy-fantasy.jp/">-->
+  <!--<meta property="og:image" content="http://questy-fantasy.jp/img/OGP_Q_v3.png">-->
+  <!--<meta property="og:type" content="website">-->
+  <!--<meta property="og:title" content="Questyデビュー曲FANTASY 特設サイト">-->
+  <!--<meta property="og:site_name" content="Questyデビュー曲FANTASY 特設サイト">-->
+  <!--<meta property="og:description"-->
+  <!--content="スワイプできるミュージックビデオ。Questyのデビュー曲FANTASY発売を記念して動画の色やカメラアングルをVJ感覚で変更できる最新型のMVになります。">-->
+  <!--<meta property="og:locale" content="ja_JP">-->
+
+  <!-- twitter card-->
+  <!--<meta property="twitter:card" content="summary_large_image">-->
+  <!--<meta property="twitter:title" content="Questyデビュー曲FANTASY 特設サイト">-->
+  <!--<meta property="twitter:description"-->
+  <!--content="スワイプできるミュージックビデオ。Questyのデビュー曲FANTASY発売を記念して動画の色やカメラアングルをVJ感覚で変更できる最新型のMVになります。">-->
+  <!--<meta property="twitter:image" content="http://questy-fantasy.jp/img/OGP_Q_v3.png">-->
+
+  <!-- canonical url-->
+  <!--<link rel="canonical/" href="http://questy-fantasy.jp/">-->
+
+  <!-- stylesheet-->
+  <link rel="stylesheet" href="style/styles.css">
+
+</head>
+<body data-low-height="true">
+<script>
+  document.body.className = /iphone|ipod|ipad|android/i.test(navigator.userAgent) ? 'sp' : 'pc'
+</script>
+
+<div class="wrapper">
+  <h1 class="dummy-title">Questyデビュー曲FANTASY 特設サイト</h1>
+  <video class="dummy-video js-video-sprite"></video>
+  <canvas class="js-canvas preview-canvas"></canvas>
+  <div class="ui js-debug-ui" style="display:none">
+    <button class="js-start-btn">start</button>
+    <button class="js-mode-btn"></button>
+    <button class="js-shuffle-btn">1</button>
+    <button class="js-skip-intro-btn">skip</button>
+    <button class="js-skip-song-btn">skip song</button>
+  </div>
+  <div class="js-loading loading" data-hidden="true">
+    <div class="loading__bar js-loading-value"></div>
+  </div>
+  <div class="aspect-alert"></div>
+  <div class="menu">
+    <div class="menu__modal">
+      <div class="artist">
+        <h2 class="artist__title"><span>QUESTY</span></h2><img class="artist__visual"
+                                                               src="./image/sp/artist_visual@2x.jpg">
+        <div class="profile--marin">
+          <div class="profile__name--marin"><span>marin</span></div>
+          <div class="profile__text--marin"><span>
+                  Date of Birth: 1998/9/6
+                  From: 神奈川
+                  Blood Type: A</span></div>
+        </div>
+        <div class="profile--hinano">
+          <div class="profile__name--hinano"><span>hinano</span></div>
+          <div class="profile__text--hinano"><span>
+                  Date of Birth: 1998/12/10
+                  From: 兵庫
+                  Blood Type: O</span></div>
+        </div>
+        <div class="profile--rena">
+          <div class="profile__name--rena"><span>rena</span></div>
+          <div class="profile__text--rena"><span>
+                  Date of Birth: 2000/5/24
+                  From: 大阪
+                  Blood Type: A</span></div>
+        </div>
+        <div class="profile--fuka">
+          <div class="profile__name--fuka"><span>fuka</span></div>
+          <div class="profile__text--fuka"><span>
+                  Date of Birth: 2001/5/16
+                  From: 茨城
+                  Blood Type: A</span></div>
+        </div>
+        <div class="profile--maria">
+          <div class="profile__name--maria"><span>maria</span></div>
+          <div class="profile__text--maria"><span>
+                  Date of Birth: 2001/12/31
+                  From: 秋田
+                  Blood Type: O</span></div>
+        </div>
+        <div class="profile--haruna">
+          <div class="profile__name--haruna"><span>haruna</span></div>
+          <div class="profile__text--haruna"><span>
+                  Date of Birth: 1999/9/5
+                  From: 神奈川
+                  Blood Type: A</span></div>
+        </div>
+        <div class="profile--rion">
+          <div class="profile__name--rion"><span>rion</span></div>
+          <div class="profile__text--rion"><span>
+                  Date of Birth: 2002/9/29
+                  From: 大阪
+                  Blood Type: A</span></div>
+        </div>
+      </div>
+      <dl class="staff">
+        <dt>ディレクター</dt>
+        <dd>本郷 伸明（EPOCH）</dd>
+        <dt>テクニカル・ディレクター</dt>
+        <dd>天野 清之（KAYAC）</dd>
+        <dt>クリエイティブ・ディレクター</dt>
+        <dd>針谷 建二郎（THINKR）</dd>
+      </dl>
+      <div class="disc">
+        <h2 class="disc__title"><span>Fantasy</span></h2>
+        <p class="disc__theme-song"><span>映画「ポッピンQ」主題歌</span></p>
+        <div class="disc__info--cd-dvd"><span>hoge</span></div>
+        <div class="disc__info--single"><span>moge</span></div>
+        <div class="disc__info--one-coin"><span>foo bar</span></div>
+        <p class="disc__notice"></p>
+      </div>
+      <ul class="mark">
+        <li class="mark__column"><a class="mark__btn--avex" href="http://www.avex.co.jp/" target="_blank"><span>avex group</span></a>
+        </li>
+        <li class="mark__column"><a class="mark__btn--pop-in-q" href="http://www.popin-q.com/" target="_blank"><span>ポッピンQ</span></a>
+        </li>
+        <li class="mark__column"><a class="mark__btn--twitter" href="https://twitter.com/Questy_Official"
+                                    target="_blank"><span>公式Twitter</span></a></li>
+      </ul>
+    </div>
+    <ul class="menu__sns">
+      <li><a class="menu__sns-icon--fb" target="_blank"
+             href="http://www.facebook.com/share.php?u=http%3A%2F%2Fquesty-fantasy.jp%2F"><span>Share</span></a></li>
+      <li><a class="menu__sns-icon--tw" target="_blank"
+             href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fquesty-fantasy.jp%2F&amp;text=%E3%82%B9%E3%83%AF%E3%82%A4%E3%83%97%E3%81%A7%E3%81%8D%E3%82%8B%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%83%93%E3%83%87%E3%82%AA%E3%80%82Questy%E3%83%87%E3%83%93%E3%83%A5%E3%83%BC%E3%82%92%E8%A8%98%E5%BF%B5%E3%81%97%E3%81%A6%E3%80%8CFANTASY%E3%80%8D%E7%89%B9%E5%88%A5%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8C%E5%85%AC%E9%96%8B&amp;hashtags=%E3%82%B9%E3%83%AF%E3%82%A4%E3%83%97MV%2CQuesty%2C%E3%83%9D%E3%83%83%E3%83%94%E3%83%B3Q"><span>Tweet</span></a>
+      </li>
+    </ul>
+    <div class="menu__toggle js-menu-toggle"></div>
+  </div>
+  <div class="ending js-ending" data-shown="false">
+    <div class="ending__video">
+      <div class="ending__btn--replay js-replay"><span>もう一度再生</span></div>
+      <a class="ending__btn--video" href="https://www.youtube.com/watch?v=2mV3N6aWDuU" target="_blank"><span>Questy「FANTASY」</span></a>
+    </div>
+    <div class="ending__footer"><a class="ending__link--avex" href="http://www.avex.co.jp/"
+                                   target="_blank"><span>avex</span></a><a class="ending__link--popin-q"
+                                                                           href="http://www.popin-q.com/"
+                                                                           target="_blank"><span>ポッピンQ</span></a><a
+      class="ending__link--twitter" href="https://twitter.com/Questy_Official"
+      target="_blank"><span>公式Twitter</span></a></div>
+  </div>
+  <div class="js-rotate-alert rotate-alert" data-shown="false"></div>
+  <div class="js-os-alert os-alert" style="display:none"></div>
+  <div class="js-webview-alert webview-alert" style="display:none">
+    <div class="webview-alert__content">
+      このコンテンツをご覧いただくには<br/>
+      iosはSafariで、AndroidはChromeで<br/>
+      開き直して下さい<strong>http://questy-fantasy.jp/</strong>
+    </div>
+  </div>
+  <div class="pc-root">
+    <div class="pc-header">
+      <div class="pc-header__content">
+        <h1 class="pc-header__title"><span>Questy / Fantasy</span></h1>
+        <div class="pc-header__qr"><span>http://questy-fantasy.jp/</span></div>
+        <div class="pc-header__video-title"><span>公式フルミュージックビデオ</span></div>
+        <a class="pc-header__thumb" href="https://www.youtube.com/watch?v=2mV3N6aWDuU"
+           target="_blank"><span>Youtube</span></a>
+      </div>
+      <ul class="pc-header__sns">
+        <li class="pc-header__sns-column"><a class="pc-header__sns-icon--fb" target="_blank"
+                                             href="http://www.facebook.com/share.php?u=http%3A%2F%2Fquesty-fantasy.jp%2F"><span>Share</span></a>
+        </li>
+        <li class="pc-header__sns-column"><a class="pc-header__sns-icon--tw" target="_blank"
+                                             href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fquesty-fantasy.jp%2F&amp;text=%E3%82%B9%E3%83%AF%E3%82%A4%E3%83%97%E3%81%A7%E3%81%8D%E3%82%8B%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%83%93%E3%83%87%E3%82%AA%E3%80%82Questy%E3%83%87%E3%83%93%E3%83%A5%E3%83%BC%E3%82%92%E8%A8%98%E5%BF%B5%E3%81%97%E3%81%A6%E3%80%8CFANTASY%E3%80%8D%E7%89%B9%E5%88%A5%E3%82%B5%E3%82%A4%E3%83%88%E3%81%8C%E5%85%AC%E9%96%8B&amp;hashtags=%E3%82%B9%E3%83%AF%E3%82%A4%E3%83%97MV%2CQuesty%2C%E3%83%9D%E3%83%83%E3%83%94%E3%83%B3Q"><span>Tweet</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="pc-root__main">
+      <div class="disc">
+        <h2 class="disc__title"><span>Fantasy</span></h2>
+        <p class="disc__theme-song"><span>映画「ポッピンQ」主題歌</span></p>
+        <div class="disc__info--cd-dvd"><span>hoge</span></div>
+        <div class="disc__info--single"><span>moge</span></div>
+        <div class="disc__info--one-coin"><span>foo bar</span></div>
+        <p class="disc__notice"></p>
+      </div>
+      <ul class="mark">
+        <li class="mark__column"><a class="mark__btn--avex" href="http://www.avex.co.jp/" target="_blank"><span>avex group</span></a>
+        </li>
+        <li class="mark__column"><a class="mark__btn--pop-in-q" href="http://www.popin-q.com/" target="_blank"><span>ポッピンQ</span></a>
+        </li>
+        <li class="mark__column"><a class="mark__btn--twitter" href="https://twitter.com/Questy_Official"
+                                    target="_blank"><span>公式Twitter</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="main.bundle.js?74d3d3ccd2707ec23074"></script></body>
+</html>
