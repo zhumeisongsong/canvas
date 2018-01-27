@@ -4,7 +4,7 @@
   "description": "swipe video",
   "main": "main.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --watch --hot --colors -d --port 1234",
+    "start": "webpack-dev-server --inline --watch --hot --colors -d --host 192.168.0.8 --port 1234",
     "build": "webpack",
     "build-serve": "rm -rf public && npm run build && npm run serve",
     "serve": "http-server"
